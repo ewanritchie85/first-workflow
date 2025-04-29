@@ -25,6 +25,12 @@ jobs:
             pip install pip-tools
             pip-compile requirements.in
             pip install -r requirements.txt
+        
+        - name: Carry out Pytest tests
+          run: |
+                python -m pytest ./test/test_adder.py
+
+                
 
 
 
